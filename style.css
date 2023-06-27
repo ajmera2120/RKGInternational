@@ -1,215 +1,82 @@
-body{
-    margin:0;
+/* Google Font Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
 }
-  .first-section{
-    background-image: url('images/school.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-     /* Set width to 100% of the viewport width */
-  height: 100vh; /* Set height to 100% of the viewport height */
-  padding-left: 30px;
-padding-right:30px; 
-   
-  }
-  header {
-    background-color: transparent;
-    padding: 20px 0;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-  }
-  
-  .logo img {
-    height: 60px; /* Adjust the height of the logo as needed */
-  }
-  
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(233, 15, 15);
-    width: 37%;
-    height: 60px; /* Adjust the height as needed */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  nav ul li {
-    display: inline-block;
-    margin-left: 10px;
-  }
-  
-  nav ul li:first-child {
-    margin-left: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-  }
-  
-  nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-  }
-  
-  .dropdown-content {
-    background-color: white;
-    color: black;
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    padding: 10px;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 8px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-    background-color: #b85757;
-  }
-  
-  main {
-    text-align: center;
-    padding: 20px;
-    color: #010101;
-    padding-bottom: 0%;
-    margin: 30Px;
-    
-  }
-  
-  .know-more-button {
-    padding: 10px 20px;
-    margin-top: 50px;
-    background-color: #FF0000;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .feature-section {
-    background-color: #FFFFFF;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100vh;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  
-  .feature-content {
-    flex: 1;
-    padding-right: 20px;
-  }
-  
-  .feature-content {
-    color: #FF0000;
-    font-size: 30px;
-  }
-.feature-content .top-heading{
-color: black;
-font-size: 20px;
-  }
-  
-  .feature-content p {
-    color: black;
-    font-size: 20px;
-  }
-  
-  .feature-image {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .feature-image img {
-    max-width: 100%;
-    height: auto;
-  }
-  .achievements {
-    padding: 60px 0;
-    background-color:white;
-    height:100vh;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 50vh;
-  }
-  
-  .section-title {
-    text-align: center;
-    color:black;
-    height:20vh;
-    margin-bottom: 40px;
-    font-size: 50px;
-  }
-  
-  .achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
-  }
-  
-  .achievement {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    height: 20vh;
-  }
-  
-  .achievement img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .achievement-title {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333333;
-    font-size: 20px;
-  }
-  .fa-solid{
-size: 100px;
-  }
-  .achievement-count {
-    font-size: 36px;
-    color: #FF0000;
-    margin-bottom: 10px;
-  }
-  
-  
-  @media (max-width: 767px) {
-    .feature-section {
-      flex-direction: column;
-    }
-  
-    .feature-content, .feature-image {
-      padding: 0;
-      text-align: center;
-    }
-  }
-  
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+nav.sticky{
+  padding: 15px 20px;
+  background: #4070f4;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .nav-content{
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #4070f4;
+}
+nav.sticky .logo a{
+  color: #fff;
+}
+.nav-content .nav-links{
+  display: flex;
+}
+.nav-content .nav-links li{
+  list-style: none;
+  margin: 0 8px;
+}
+ .nav-links li a{
+  text-decoration: none;
+  color: #0E2431;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 4px;
+  transition: all 0.3s ease;
+}
+ .nav-links li a:hover{
+   color: #4070f4;
+ }
+ nav.sticky .nav-links li a{
+   color: #fff;
+   transition: all 0.4s ease;
+}
+ nav.sticky .nav-links li a:hover{
+  color: #0E2431;
+}
+.home{
+  height: 100vh;
+  width: 100%;
+  background: url("images/background.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+h2{
+  font-size: 30px;
+  margin-bottom: 6px;
+  color: #4070f4;
+}
+.text{
+  text-align: justify;
+  padding: 40px 80px;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+}
