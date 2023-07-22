@@ -267,6 +267,21 @@ ul{
 	color: #24262b;
 	background-color: #ffffff;
 }
+.footer1 {
+  text-align: center;
+}
+
+.footer1 .hr {
+  margin: 0;
+  padding-top: 10px;
+}
+
+p.copyright {
+  color: lightgreen;
+  line-height: 40px;
+  font-size: 1.5em;
+}
+
 
 /*responsive*/
 @media(max-width: 767px){
@@ -603,5 +618,7 @@ cursor: pointer;
 
 /* selected link */
 .links:active { color: black; }
+
+
 
 
