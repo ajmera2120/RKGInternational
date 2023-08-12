@@ -25,7 +25,7 @@ body {
 
 .header {
   padding: 0 4.8rem;
-  height: 10rem;
+  height: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +33,7 @@ body {
 }
 
 .header .logo {
-  height: 20rem;
+  height: 13rem;
   
 }
 
@@ -47,10 +47,10 @@ body {
 .navbar-link:link,
 .navbar-link:visited {
   display: inline-block;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
   color:green;
   transition: all 0.3s;
 }
